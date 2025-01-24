@@ -46,26 +46,16 @@ void placeMines() {
 }
 
 void printBoard(char b[ROWS][COLS]) {
-    printf("   ");
+    printf("  ");
     for (int i = 0; i < COLS; i++) {
-        printf("(%d) ", i);
+        printf("%d ", i);
     }
     printf("\n");
 
     for (int i = 0; i < ROWS; i++) {
-        printf("(%d) ", i);
+        printf("%d ", i);
         for (int j = 0; j < COLS; j++) {
-            if (b[i][j] == 'M') {
-                printf("(M) ");
-            } else if (b[i][j] == 'F') {
-                printf("(F) ");
-            } else if (b[i][j] == '0') {
-                printf("     ");
-            } else if (b[i][j] == '-') {
-                printf(" —  ");
-            } else {
-                printf(" %c   ", b[i][j]);
-            }
+            printf("%c ", b[i][j]);
         }
         printf("\n");
     }
