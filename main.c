@@ -65,6 +65,20 @@ bool isValidMove(int row, int col) {
     return row >= 0 && row < ROWS && col >= 0 && col < COLS && board[row][col] == '-';
 }
 
+bool isFlagged(int row, int col) {
+    return board[row][col] == 'F';
+}
+
+void toggleFlag(int row, int col) {
+    if (board[row][col] == 'F') {
+        board[row][col] = '-';
+        printf("Flag removed from (%d, %d).\n", row, col);
+    } else {
+        board[row][col] = 'F';
+        printf("Flag placed at (%d, %d).\n", row, col);
+    }
+}
+
 bool revealCell(int row, int col) {
     if (!isValidMove(row, col)) {
         return false;
@@ -112,24 +126,44 @@ int main() {
         printf("\nCurrent Board:\n");
         printBoard(board);
 
+        char action;
         int row, col;
-        printf("Enter row and column to reveal (e.g., 2 3): ");
-        scanf("%d %d", &row, &col);
 
-        if (!isValidMove(row, col)) {
-            printf("Invalid move! Try again.\n");
+        printf("Enter action (r for reveal, f for flag) and row and column (e.g., r 2 3 or f 4 5): ");
+        scanf(" %c %d %d", &action, &row, &col);
+
+        if (action == 'f') {
+            if (row >= 0 && row < ROWS && col >= 0 && col < COLS) {
+                toggleFlag(row, col);
+            } else {
+                printf("Invalid coordinates for flagging! Try again.\n");
+            }
             continue;
         }
 
-        gameOver = revealCell(row, col);
+        if (action == 'r') {
+            if (isFlagged(row, col)) {
+                printf("Cell (%d, %d) is flagged. Unflag it first to reveal.\n", row, col);
+                continue;
+            }
 
-        if (gameOver) {
-            printf("\nBOOM! You hit a mine. Game Over!\n");
-            printBoard(mines);
-        } else if (checkWin()) {
-            printf("\nCongratulations! You cleared the board!\n");
-            printBoard(mines);
-            break;
+            if (!isValidMove(row, col)) {
+                printf("Invalid move! Try again.\n");
+                continue;
+            }
+
+            gameOver = revealCell(row, col);
+
+            if (gameOver) {
+                printf("\nBOOM! You hit a mine. Game Over!\n");
+                printBoard(mines);
+            } else if (checkWin()) {
+                printf("\nCongratulations! You cleared the board!\n");
+                printBoard(mines);
+                break;
+            }
+        } else {
+            printf("Invalid action! Use 'r' to reveal or 'f' to flag.\n");
         }
     }
 
