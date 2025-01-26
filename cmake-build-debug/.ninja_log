@@ -1,17 +1,5 @@
 # ninja log v6
-45	222	7589991627362006	CMakeFiles/Minesweeper__Niva_.dir/main.c.obj	ffa067755a67a0ce
-223	782	7589991629144947	Minesweeper__Niva_.exe	45b863ebfc8461f0
-206	976	7590060008313060	CMakeFiles/Minesweeper__Niva_.dir/main.c.obj	ffa067755a67a0ce
-977	1528	7590060016018072	Minesweeper__Niva_.exe	45b863ebfc8461f0
-10	303	7590061408981679	CMakeFiles/Minesweeper__Niva_.dir/main.c.obj	ffa067755a67a0ce
-304	659	7590061411917420	Minesweeper__Niva_.exe	45b863ebfc8461f0
-13	313	7590063607306235	CMakeFiles/Minesweeper__Niva_.dir/main.c.obj	ffa067755a67a0ce
-314	697	7590063610317919	Minesweeper__Niva_.exe	45b863ebfc8461f0
-24	695	7590068859726131	CMakeFiles/Minesweeper__Niva_.dir/main.c.obj	ffa067755a67a0ce
-695	1159	7590068866435678	Minesweeper__Niva_.exe	45b863ebfc8461f0
-12	327	7590070183671595	CMakeFiles/Minesweeper__Niva_.dir/main.c.obj	ffa067755a67a0ce
-327	714	7590070186821599	Minesweeper__Niva_.exe	45b863ebfc8461f0
-16	397	7590074728212595	CMakeFiles/Minesweeper__Niva_.dir/main.c.obj	ffa067755a67a0ce
-397	686	7590074732022593	Minesweeper__Niva_.exe	45b863ebfc8461f0
-20	620	7590075496839735	CMakeFiles/Minesweeper__Niva_.dir/main.c.obj	ffa067755a67a0ce
-621	1169	7590075502849738	Minesweeper__Niva_.exe	45b863ebfc8461f0
+22	240	7594495142144928	CMakeFiles/Minesweeper__Niva_.dir/main.c.obj	ffa067755a67a0ce
+241	470	7594495144324812	Minesweeper__Niva_.exe	45b863ebfc8461f0
+35	3043	7595761607259425	CMakeFiles/Minesweeper__Niva_.dir/main.c.obj	c293c2770ee7b703
+3043	3496	7595761637345514	Minesweeper__Niva_.exe	1a53030a52723e44
